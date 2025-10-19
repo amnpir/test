@@ -6,10 +6,6 @@ options:
 settings:
   base:
     PRODUCT_BUNDLE_IDENTIFIER: com.example.TasksApp
-packages:
-  SwiftCollections:
-    url: https://github.com/apple/swift-collections
-    from: 1.0.4
 targets:
   TasksApp:
     type: application
@@ -30,8 +26,6 @@ targets:
           UIApplicationSupportsMultipleScenes: false
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
         UIUserInterfaceStyle: Light
-    dependencies:
-      - package: SwiftCollections
 schemes:
   TasksApp:
     build:
