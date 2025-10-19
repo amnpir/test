@@ -20,6 +20,11 @@ jobs:
         with:
           xcode-version: '16.*'
 
+      - name: Show Xcode and Swift versions
+        run: |
+          xcodebuild -version
+          xcrun swift --version
+
       - name: Install XcodeGen
         run: brew install xcodegen
 
