@@ -1,0 +1,37 @@
+name: TasksApp
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: '16.0'
+settings:
+  base:
+    PRODUCT_BUNDLE_IDENTIFIER: com.example.TasksApp
+targets:
+  TasksApp:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    resources:
+      - path: Resources
+    settings:
+      base:
+        INFOPLIST_FILE: Resources/Info.plist
+    info:
+      path: Resources/Info.plist
+      properties:
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UIUserInterfaceStyle: Light
+schemes:
+  TasksApp:
+    build:
+      targets:
+        TasksApp: all
+    run:
+      config: Debug
+      environmentVariables:
+        IS_UI_TESTING: NO
